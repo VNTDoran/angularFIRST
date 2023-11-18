@@ -1,0 +1,7 @@
+.star-icon {
+  color: black;
+}
+
+.star-icon.liked {
+  color: darkorange;
+}

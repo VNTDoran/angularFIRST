@@ -1,0 +1,72 @@
+<p>home works!</p>
+{{ title | lowercase }}
+<!--
+<h2>My Fruits</h2>
+<ul class="fruits">
+  <li *ngFor="let fruit of fruits">
+    <span class="name">{{ fruit }}</span>
+  </li>
+</ul>
+-->
+<!--
+<input
+  class="btn btn-secondary"
+  type="submit"
+  value="event"
+  (click)="sayHello()"
+/>
+<input class="form-control" type="text" [(ngModel)]="color" />
+<div class="div-text" [style.color]="color">slm alaykom</div>
+
+<h2>My Products</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let product of listPorduct">
+    <span class="name" [style.color]="color"
+      >{{ product.id }} {{ product.title }} {{ product.price }}</span
+    >
+  </li>
+</ul>
+
+<input class="form-control" type="text" [(ngModel)]="prix" />
+<table border="1" class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Like</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let i of listPorduct">
+    <ng-container *ngIf="i.price > prix || prix == null">
+      <td scope="row">{{ i.id }}</td>
+      <td scope="row">{{ i.title }}</td>
+      <td scope="row">{{ i.price }}</td>
+      <td scope="row">{{ i.quantity }}</td>
+      <td scope="row">{{ i.like }}</td>
+      <td scope="row">
+        <input
+          class="btn btn-primary"
+          type="submit"
+          value="like"
+          (click)="changeValue(i.id)"
+        />
+      </td>
+      <td scope="row">
+        <button
+          class="btn btn-info"
+          [disabled]="i.quantity === 0"
+          (click)="changeQuantity(i.id)"
+        >
+          Buy
+        </button>
+      </td>
+    </ng-container>
+  </tr>
+</table>
+
+-->

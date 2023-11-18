@@ -1,0 +1,40 @@
+<p>residences-component works!</p>
+
+<table border="1" class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">name</th>
+      <th scope="col">address</th>
+      <th scope="col">image</th>
+      <th scope="col">Afficher apartements</th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let i of listResidences">
+    <td scope="row">{{ i.id }}</td>
+    <td scope="row">{{ i.name }}</td>
+    <td scope="row">{{ i.address }}</td>
+    <td scope="row">
+      <img
+        [src]="i.image"
+        alt="Residence Image"
+        style="max-height: 200px; max-width: 200px"
+      />
+    </td>
+    <td scope="row">
+      <input
+        class="btn btn-primary"
+        type="submit"
+        value="Show Apartments"
+        (click)="AfficherApartments(i.id)"
+      />
+    </td>
+
+    <ng-container *ngIf="showArr[i.id]">
+      <app-single-apartments
+        [list]="listApartmentsSpec[i.id]"
+      ></app-single-apartments>
+    </ng-container>
+  </tr>
+</table>
